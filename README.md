@@ -12,7 +12,7 @@ https://github.com/strothj/alpine-patchelf/releases
 ## Usage Example
 ```dockerfile
 FROM alpine:3.3
-RUN apk add --no-cache ca-certificates && \
+RUN apk add --no-cache ca-certificates libstdc++ && \
     wget https://github.com/strothj/alpine-patchelf/releases/download/0.9/0.9.tar.gz && \
     tar -C / -xzf 0.9.tar.gz && rm 0.9.tar.gz && \
     patchelf --version && \
